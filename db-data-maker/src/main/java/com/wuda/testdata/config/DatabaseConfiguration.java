@@ -32,13 +32,13 @@ public class DatabaseConfiguration {
      */
     public static void applyArgs(DataSource dataSource, CliArgs cliArgs) {
         org.apache.tomcat.jdbc.pool.DataSource tomcatDataSource = (org.apache.tomcat.jdbc.pool.DataSource) dataSource;
-        tomcatDataSource.setUrl(cliArgs.getMysqlUrl());
-        if (StringUtils.isNoneBlank(cliArgs.getMysqlUsername())) {
-            tomcatDataSource.setUsername(cliArgs.getMysqlUsername());
+        tomcatDataSource.setUrl(cliArgs.getUrl());
+        if (StringUtils.isNoneBlank(cliArgs.getUsername())) {
+            tomcatDataSource.setUsername(cliArgs.getUsername());
         }
-        if (StringUtils.isNoneBlank(cliArgs.getMysqlPassword())) {
-            tomcatDataSource.setPassword(cliArgs.getMysqlPassword());
+        if (StringUtils.isNoneBlank(cliArgs.getPassword())) {
+            tomcatDataSource.setPassword(cliArgs.getPassword());
         }
-        tomcatDataSource.setMaxActive(cliArgs.getMysqlMaxConnection());
+        tomcatDataSource.setMaxActive(cliArgs.getMaxConnection());
     }
 }

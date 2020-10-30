@@ -34,24 +34,24 @@ public class CliOptionUtils {
                 .desc(CliArgs.THREAD_DESC)
                 .build());
         options.addOption(Option.builder()
-                .longOpt(CliArgs.MYSQL_URL)
+                .longOpt(CliArgs.URL)
                 .hasArg()
-                .desc(CliArgs.MYSQL_URL_DESC)
+                .desc(CliArgs.URL_DESC)
                 .build());
         options.addOption(Option.builder()
-                .longOpt(CliArgs.MYSQL_USERNAME)
+                .longOpt(CliArgs.USERNAME)
                 .hasArg()
-                .desc(CliArgs.MYSQL_USERNAME_DESC)
+                .desc(CliArgs.USERNAME_DESC)
                 .build());
         options.addOption(Option.builder()
-                .longOpt(CliArgs.MYSQL_PASSWORD)
+                .longOpt(CliArgs.PASSWORD)
                 .hasArg()
-                .desc(CliArgs.MYSQL_PASSWORD_DESC)
+                .desc(CliArgs.PASSWORD_DESC)
                 .build());
         options.addOption(Option.builder()
-                .longOpt(CliArgs.MYSQL_MAX_CONNECTION)
+                .longOpt(CliArgs.MAX_CONNECTION)
                 .hasArg()
-                .desc(CliArgs.MYSQL_MAX_CONNECTION_DESC)
+                .desc(CliArgs.MAX_CONNECTION_DESC)
                 .build());
         options.addOption(Option.builder()
                 .longOpt(CliArgs.USER_COUNT)
@@ -133,43 +133,43 @@ public class CliOptionUtils {
     }
 
     private static void mysqlUrlOption(CommandLine commandLine, CliArgs cliArgs) {
-        if (commandLine.hasOption(CliArgs.MYSQL_URL)) {
-            String optionValue = commandLine.getOptionValue(CliArgs.MYSQL_URL);
+        if (commandLine.hasOption(CliArgs.URL)) {
+            String optionValue = commandLine.getOptionValue(CliArgs.URL);
             if (StringUtils.isNotBlank(optionValue)) {
-                cliArgs.setMysqlUrl(optionValue);
+                cliArgs.setUrl(optionValue);
             }
         }
     }
 
     private static void mysqlUsernameOption(CommandLine commandLine, CliArgs cliArgs) {
-        if (commandLine.hasOption(CliArgs.MYSQL_USERNAME)) {
-            String optionValue = commandLine.getOptionValue(CliArgs.MYSQL_USERNAME);
+        if (commandLine.hasOption(CliArgs.USERNAME)) {
+            String optionValue = commandLine.getOptionValue(CliArgs.USERNAME);
             if (StringUtils.isNotBlank(optionValue)) {
-                cliArgs.setMysqlUsername(optionValue);
+                cliArgs.setUsername(optionValue);
             }
         }
     }
 
     private static void mysqlPasswordOption(CommandLine commandLine, CliArgs cliArgs) {
-        if (commandLine.hasOption(CliArgs.MYSQL_PASSWORD)) {
-            String optionValue = commandLine.getOptionValue(CliArgs.MYSQL_PASSWORD);
+        if (commandLine.hasOption(CliArgs.PASSWORD)) {
+            String optionValue = commandLine.getOptionValue(CliArgs.PASSWORD);
             if (StringUtils.isNotBlank(optionValue)) {
-                cliArgs.setMysqlPassword(optionValue);
+                cliArgs.setPassword(optionValue);
             }
         }
     }
 
     private static void mysqlMaxConnectionOption(CommandLine commandLine, CliArgs cliArgs) throws ParseException {
-        if (commandLine.hasOption(CliArgs.MYSQL_MAX_CONNECTION)) {
-            String optionValue = commandLine.getOptionValue(CliArgs.MYSQL_MAX_CONNECTION);
+        if (commandLine.hasOption(CliArgs.MAX_CONNECTION)) {
+            String optionValue = commandLine.getOptionValue(CliArgs.MAX_CONNECTION);
             if (StringUtils.isNotBlank(optionValue)) {
-                String message = "选项" + CliArgs.MYSQL_MAX_CONNECTION + "只支持数字类型,并且必须大于0";
+                String message = "选项" + CliArgs.MAX_CONNECTION + "只支持数字类型,并且必须大于0";
                 try {
                     int maxConnection = Integer.parseInt(optionValue);
                     if (maxConnection <= 0) {
                         throw new ParseException(message);
                     }
-                    cliArgs.setMysqlMaxConnection(maxConnection);
+                    cliArgs.setMaxConnection(maxConnection);
                 } catch (Exception e) {
                     throw new ParseException(message);
                 }

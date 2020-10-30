@@ -10,8 +10,8 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>oracle-data-maker</artifactId>
-    <name>oracle-data-maker</name>
+    <artifactId>db-data-maker</artifactId>
+    <name>db-data-maker</name>
 
 
     <dependencies>
@@ -84,7 +84,7 @@
     </dependencies>
 
     <build>
-        <finalName>oracle-data-maker-${version}</finalName>
+        <finalName>db-data-maker-${version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

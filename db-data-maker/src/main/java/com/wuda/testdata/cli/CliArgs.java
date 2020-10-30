@@ -32,7 +32,7 @@ public class CliArgs {
     final static String URL = "mysql-url";
     final static String URL_DEFAULT = "jdbc:oracle:thin:@host:1521:ORCL";
     final static String URL_DESC = "mysql连接url(default=" + URL_DEFAULT + ")";
-    private String mysqlUrl = URL_DEFAULT;
+    private String Url = URL_DEFAULT;
 
     final static String USERNAME = "bing";
     final static String USERNAME_DESC = "mysql username";
