@@ -18,7 +18,7 @@
     <name>test-data-maker</name>
     <modules>
         <module>mysql-data-maker</module>
-        <module>oracle-data-maker</module>
+        <module>db-data-maker</module>
     </modules>
 
     <distributionManagement>
