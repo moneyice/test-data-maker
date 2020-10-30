@@ -1,4 +1,4 @@
-package com.wuda.tester.mysql;
+package com.wuda.testdata;
 
 import com.wuda.testdata.cli.CliArgs;
 import com.wuda.testdata.cli.CliOptionUtils;
