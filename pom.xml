@@ -52,7 +52,7 @@
         <commons.cli.version>1.4</commons.cli.version>
         <debezium.version>0.9.3.Final</debezium.version>
         <druid.version>1.1.15</druid.version>
-        <commons-io.version>2.6</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
         <commons-collections.version>4.1</commons-collections.version>
         <guava.version>20.0</guava.version>
         <jackson-databind.version>2.9.10.3</jackson-databind.version>
